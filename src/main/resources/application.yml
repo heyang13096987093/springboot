@@ -1,0 +1,21 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 120.76.133.129:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+management:
+  endpoints:
+    web:
+
+      exposure:
+        include: '*'
